@@ -7,7 +7,12 @@ setup: requirements.txt
 time_original:
 	python original/test.py
 
-COMPILE_DIR=compile
+time_dir:
+	cd ${FOLDER} && python setup.py build_ext --inplace
+	cd ${FOLDER} && python test.py
+
 time_compile:
-	cd ${COMPILE_DIR} && python setup.py build_ext --inplace
-	cd ${COMPILE_DIR} && python test.py
+	$(MAKE) time_dir FOLDER=compile
+
+time_ctypes:
+	$(MAKE) time_dir FOLDER=ctypes

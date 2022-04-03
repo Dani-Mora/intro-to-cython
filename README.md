@@ -36,3 +36,14 @@ make time_compile
 ```
 
 Sorting takes now around 3.8 seconds in our machine. This is ~25% time reduction already.
+
+### Add C types
+
+After that, we can proceed replacing function definitions to use C types, and test it
+by typing:
+
+```bash
+make time_ctypes
+```
+
+This gives us an average time around 2 seconds. We are achieving a ~48% absolute reduction this time.
