@@ -59,3 +59,15 @@ make time_memviews
 
 This results into an average time of ~0.15 seconds. It is an absolute time reduction of around
 ~92% given the previous step and around 33 times faster than the original approach!
+
+## Debugging optimization
+
+We can debug the optimization process by typing (within each subfolder):
+
+```bash
+cython -a sort.pyx
+```
+
+This will generate an HTML showing the C code generated for each Python line:
+
+![Image](resources/sort.png)
