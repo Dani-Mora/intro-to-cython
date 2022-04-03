@@ -16,3 +16,6 @@ time_compile:
 
 time_ctypes:
 	$(MAKE) time_dir FOLDER=ctypes
+
+time_memview:
+	$(MAKE) time_dir FOLDER=memview

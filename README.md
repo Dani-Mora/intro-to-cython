@@ -47,3 +47,15 @@ make time_ctypes
 ```
 
 This gives us an average time around 2 seconds. We are achieving a ~48% absolute reduction this time.
+
+### Optimizing using memoryview
+
+Finally, we can use memoryviews (array views), which should let us further optimize our
+sorting code. We can run it by typing:
+
+```bash
+make time_memviews
+```
+
+This results into an average time of ~0.15 seconds. It is an absolute time reduction of around
+~92% given the previous step and around 33 times faster than the original approach!
