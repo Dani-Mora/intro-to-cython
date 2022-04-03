@@ -6,3 +6,8 @@ setup: requirements.txt
 
 time_original:
 	python original/test.py
+
+COMPILE_DIR=compile
+time_compile:
+	cd ${COMPILE_DIR} && python setup.py build_ext --inplace
+	cd ${COMPILE_DIR} && python test.py
